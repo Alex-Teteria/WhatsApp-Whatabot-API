@@ -41,3 +41,19 @@ wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
 print(connect(wlan_id, wlan_pass))
 ```
+#### Creating an object of the Whatsapp_bot class
+
+```python
+class Whatsapp_bot:
+    """This will be our Whatsapp bot"""
+    
+    def __init__(self, phone_number, api_key):
+        self.phone_number = phone_number
+        self.api_key = api_key
+        
+    def send_message(self, message):
+        url = 'https://api.whatabot.net/whatsapp/sendMessage?apikey=' + self.api_key + '&text=' + message + '&phone=' + self.phone_number
+        response = urequests.get(url)
+        print('Message sent successfully!' if response.status_code == 200 else 'Error sending message!'+'\n'+response.text)
+```
+#### Example to Send GET request API
