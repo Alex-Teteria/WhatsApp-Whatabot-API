@@ -20,7 +20,7 @@ How to get the necessary data to create WhatsApp Whatabot API:
 [Create the Whatabot contact](https://whatabot.net/#howtouse)
 
 ## 3. Install
-Download a code and unpack it into your project folder. Use Thonny IDE or other IDE for upload your code in microcontroller board.
+Copy the code to your project.
 
 ## 4. Quick start
 #### Typical Wi-Fi connection code for ESP board (Station mode)
