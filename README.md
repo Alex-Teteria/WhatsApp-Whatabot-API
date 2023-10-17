@@ -22,15 +22,13 @@ How to get the necessary data to create WhatsApp Whatabot API:
 Download a code and unpack it into your project folder. Use Thonny IDE or other IDE for upload your code in microcontroller board.
 
 ## 4. Quick start
-#### Typical Wi-Fi connection code for ESP board
-\```python
-import network, urequests
+#### Typical Wi-Fi connection code for ESP board (Station mode)
 
-wlan_id = 'Mikro2'
-wlan_pass = '196613036594'
+```python
+import network
 
-phone_number = '380673820543'
-api_key = '92941499'
+wlan_id = 'your wi-fi ssid'
+wlan_pass = 'your password'
 
 def connect(ssid, passwd):
     wlan.disconnect()
@@ -38,4 +36,8 @@ def connect(ssid, passwd):
     while not wlan.isconnected():
         pass
     return wlan.ifconfig()
-\```
+
+wlan = network.WLAN(network.STA_IF)
+wlan.active(True)
+print(connect(wlan_id, wlan_pass))
+```
