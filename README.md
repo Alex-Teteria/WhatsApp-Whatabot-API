@@ -27,9 +27,6 @@ Download a code and unpack it into your project folder. Use Thonny IDE or other 
 ```python
 import network
 
-wlan_id = 'your wi-fi ssid'
-wlan_pass = 'your password'
-
 def connect(ssid, passwd):
     wlan.disconnect()
     wlan.connect(ssid, passwd)
@@ -37,9 +34,13 @@ def connect(ssid, passwd):
         pass
     return wlan.ifconfig()
 
-wlan = network.WLAN(network.STA_IF)
-wlan.active(True)
-print(connect(wlan_id, wlan_pass))
+if __name__ == '__main__':
+    wlan_id = 'your wi-fi ssid'
+    wlan_pass = 'your password'
+    
+    wlan = network.WLAN(network.STA_IF)
+    wlan.active(True)
+    print(connect(wlan_id, wlan_pass))
 ```
 #### Creating an object of the Whatsapp_bot class
 
@@ -57,3 +58,17 @@ class Whatsapp_bot:
         print('Message sent successfully!' if response.status_code == 200 else 'Error sending message!'+'\n'+response.text)
 ```
 #### Example to Send GET request API
+
+```python
+if __name__ == '__main__':
+    import urequests
+
+    phone_number = 'your phone number'
+    api_key = 'your api key'
+
+# створюємо примірник класу Whatsapp_bot
+    whatsapp_bot = Whatsapp_bot(phone_number, api_key)
+# символ переноса рядка для Whatsapp - '%0a' !
+    message = 'Тестування надсилання кирилиці:%0aПросто деякий текст!.%0a Ще деякий текст!'
+    whatsapp_bot.send_message(message)
+```
