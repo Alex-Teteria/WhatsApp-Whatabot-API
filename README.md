@@ -9,6 +9,7 @@ Requires: Any microcontroller to send a message to execute a http GET.
 2. [Creating a WhatsApp Whatabot API](./README.md#2-Creating-a-WhatsApp-Whatabot-API)
 3. [Install](./README.md#3-install)
 4. [Quick start](./README.md#4-Quick-start)
+5. [Some notes](./README.md#5-Some-notes-when-preparing-messages-for-sending)
 
 ## 1. Overview
 
@@ -72,3 +73,4 @@ if __name__ == '__main__':
     message = 'Тестування надсилання кирилиці:%0aПросто деякий текст!.%0a Ще деякий текст!'
     whatsapp_bot.send_message(message)
 ```
+## 5. Some notes when preparing messages for sending
