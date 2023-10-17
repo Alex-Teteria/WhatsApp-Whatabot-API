@@ -83,5 +83,6 @@ Encoding should be used to send the following characters:
 |     #       |    %23   |
 |  newline    |    %0a   |
 |     ~       |    %7e   |
+  
 Symbols { } [ ] / \ ^ < > ! ? : ; . , - + = _ ( ) * " @ $ are sent normally 
 
