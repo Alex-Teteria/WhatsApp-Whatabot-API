@@ -20,15 +20,15 @@ class Whatsapp_bot:
         print('Message sent successfully!' if response.status_code == 200 else 'Error sending message!'+'\n'+response.text)
 
 if __name__ == '__main__':
-    wlan_id = '########'
-    wlan_pass = '############'
+    wlan_id = 'your wi-fi ssid'
+    wlan_pass = 'wi-fi password'
     
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
     print(connect(wlan_id, wlan_pass))
 
-    phone_number = '############'
-    api_key = '########'
+    phone_number = 'your phone number'
+    api_key = 'your apikey'
 
 # створюємо примірник класу Whatsapp_bot
     whatsapp_bot = Whatsapp_bot(phone_number, api_key)
