@@ -74,3 +74,14 @@ if __name__ == '__main__':
     whatsapp_bot.send_message(message)
 ```
 ## 5. Some notes when preparing messages for sending
+
+There may be an error when sending some characters: "Status":"Error. Missing or incorrect number".  
+Encoding should be used to send the following characters:  
+|    Symbol   | Encoding |
+| ----------- | -------- |
+|     &       |    %26   |
+|     #       |    %23   |
+|  newline    |    %0a   |
+|     ~       |    %7e   |
+Symbols { } [ ] / \ ^ < > ! ? : ; . , - + = _ ( ) * " @ $ are sent normally 
+
