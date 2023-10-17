@@ -6,9 +6,9 @@ Requires: Any microcontroller to send a message to execute a http GET.
 ## Contents
 
 1. [Overview](./README.md#1-overview)
-2. [Creating a WhatsApp Whatabot API](./README.md#2-creating)
+2. [Creating a WhatsApp Whatabot API](./README.md#2-Creating-a-WhatsApp-Whatabot-API)
 3. [Install](./README.md#3-install)
-4. [Quick start](./README.md#4-start)
+4. [Quick start](./README.md#4-Quick-start)
 
 ## 1. Overview
 
@@ -23,7 +23,7 @@ Download a code and unpack it into your project folder. Use Thonny IDE or other 
 
 ## 4. Quick start
 #### Typical Wi-Fi connection code for ESP board
-
+\```python
 import network, urequests
 
 wlan_id = 'Mikro2'
@@ -38,4 +38,4 @@ def connect(ssid, passwd):
     while not wlan.isconnected():
         pass
     return wlan.ifconfig()
-
+\```
