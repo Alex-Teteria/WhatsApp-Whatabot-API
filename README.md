@@ -47,8 +47,7 @@ if __name__ == '__main__':
 
 ```python
 class Whatsapp_bot:
-    """This will be our Whatsapp bot"""
-    
+    """This is our Whatsapp bot"""
     def __init__(self, phone_number, api_key):
         self.phone_number = phone_number
         self.api_key = api_key
