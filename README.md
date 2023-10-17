@@ -14,5 +14,5 @@ Requires: Any microcontroller to send a message to execute a http GET.
 
 # 2. Creating a WhatsApp Whatabot API
 How to get the necessary data to create WhatsApp Whatabot API:  
-[Create the Whatabot contact]([https://whatabot.net/#about_section)
+[Create the Whatabot contact](https://whatabot.net/#about_section)
 
